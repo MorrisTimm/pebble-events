@@ -79,5 +79,7 @@ void events_accel_tap_service_unsubscribe(EventHandle handle);
 
 // unobstructed area service
 
+#if PBL_API_EXISTS(unobstructed_area_service_subscribe)
 EventHandle events_unobstructed_area_service_subscribe(UnobstructedAreaHandlers handlers, void *context);
 void events_unobstructed_area_service_unsubscribe(EventHandle handle);
+#endif // PBL_API_EXISTS(unobstructed_area_service_subscribe)
